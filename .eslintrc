@@ -1,0 +1,18 @@
+
+#extends: "overstock"
+parser: "babel-eslint"
+rules:
+  no-console: 0
+env:
+  es6: true
+  browser: true
+  node: true
+  jquery: true
+  mocha: true
+globals:
+  os: true
+  google: true
+  React: true
+  TestUtils: true
+  routerHelper: true
+  _: true

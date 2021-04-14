@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AngularJS Todo</title>
+    <link rel="SHORTCUT ICON" type="image/png" href="./assets/img/favicon.png?rnd=123">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/base.css">
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="ListCtrl">
+        <h2>AngularJS Todo</h2>
+        <h3>You have <span ng-cloak>{{getTotalCount()}}</span> left to do</h3>
+        <form>
+            <input placeholder="I need to..." type="text" ng-model="formTodoText" />
+            <button>Add</button>
+            <button>Clear Completed</button>
+        </form>
+        <ul ng-cloak>
+            <li ng-repeat="todo in todos">
+                <input type="checkbox" ng-model="todo.done" />
+                <span class="done-{{todo.done}}">{{todo.text}}</span>
+            </li>
+        </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./assets/js/base.js"></script>
+
+    <script>
+        const app = angular.module('myApp', []);
+        app.controller('ListCtrl', ($scope) => {
+            $scope.todos = [{text:'First Item', done:false},{text: 'Another Item', done:false}];
+
+            $scope.getTotalCount = () => {
+                return $scope.todos.length;
+            };
+        });
+
+    </script>
+</body>
+</html>

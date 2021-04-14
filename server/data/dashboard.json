@@ -1,0 +1,29 @@
+{
+    "item0":{
+        "id" : "item0",
+        "symbol" : "ostk",
+        "company" : "Overstock.com",
+        "date": "3/8/17",
+        "shares" : "150",
+        "bought" : "16.55",
+        "current" : "17.70"
+    },
+    "item1":{
+        "id" : "item1",
+        "symbol" : "amzn",
+        "company" : "Amazon.com",
+        "date": "3/8/17",
+        "shares" : "11",
+        "bought" : "850.00",
+        "current" : "846.02"
+    },
+    "item2":{
+        "id" : "item2",
+        "symbol" : "ebay",
+        "company" : "Ebay.com",
+        "date": "3/8/17",
+        "shares" : "120",
+        "bought" : "31.54",
+        "current" : "33.33"
+    }
+}

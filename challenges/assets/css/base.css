@@ -1,0 +1,203 @@
+body {
+	font-family: 'Open Sans', "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	font-weight: 400;
+    background-color: #f3f3f3;
+}
+
+p, span, a, ul, li, button {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+strong {
+	font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.5em;
+	font-weight: 300;
+}
+
+strong {
+  font-weight: 400;
+}
+
+
+
+.fork-ribbon {
+    width: 12.1em;
+    height: 12.1em;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    pointer-events: none;
+    font-size: 13px;
+    text-decoration: none;
+    text-indent: -999999px;
+}
+
+.fork-ribbon.fixed {
+    position: fixed;
+}
+
+.fork-ribbon:before, .fork-ribbon:after {
+    /* The right and left classes determine the side we attach our banner to */
+    position: absolute;
+    display: block;
+    width: 15.38em;
+    height: 1.54em;
+    top: 3.23em;
+    right: -3.23em;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.fork-ribbon:before {
+    content: "";
+    padding: .38em 0;
+    background-color: #a00;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+    -webkit-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
+    pointer-events: auto;
+}
+
+.fork-ribbon:after {
+    content: attr(title);
+    color: #fff;
+    font: 700 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.54em;
+    text-decoration: none;
+    text-shadow: 0 -.08em rgba(0, 0, 0, 0.5);
+    text-align: center;
+    text-indent: 0;
+    padding: .15em 0;
+    margin: .15em 0;
+    border-width: .08em 0;
+    border-style: dotted;
+    border-color: #fff;
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.fork-ribbon.left-top, .fork-ribbon.left-bottom {
+    right: auto;
+    left: 0;
+}
+
+.fork-ribbon.left-bottom, .fork-ribbon.right-bottom {
+    top: auto;
+    bottom: 0;
+}
+.fork-ribbon.right-bottom:before, .fork-ribbon.right-bottom:after {
+    top: auto;
+    bottom: 3.23em;
+}
+.fork-ribbon.right-bottom:before, .fork-ribbon.right-bottom:after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#answer{
+    text-align: center;
+    font-size:65px;
+    margin: 50px 0;
+    padding: 50px 0;
+    background-color: white;
+}
+
+/* All Questions Challenge Root */
+
+.tile {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    cursor:pointer;
+	border-radius:15px;
+    /* grid background */
+    background-image: linear-gradient(rgba(255,255,255,.1) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255,255,255,.1) 2px, transparent 2px),
+    linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px);
+    background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px
+}
+.tile:hover {
+    color:#fff;
+    opacity: .85;
+}
+
+#all-challenges .purple{ background-color: #801638;}
+#all-challenges .red{ background-color: #C22326;}
+#all-challenges .orange{ background-color: #DC572E;}
+#all-challenges .green{ background-color: #41B23B;}
+#all-challenges .yellow{ background-color: #FDB632;}
+#all-challenges .blue{ background-color: #2672EC;}
+#all-challenges .teal{ background-color: #047878;}
+
+.rowcolumn-img{
+    margin:0 auto;
+    width:1345px;
+    display: block;
+}
+.legend-scale{
+    float:right;
+    margin-bottom:50px;
+}
+.legend-scale ul li {
+	font-size: 80%;
+	list-style: none;
+	margin-left: 5px;
+	line-height: 18px;
+	margin-bottom: 2px;
+    float:left;
+    padding:3px 5px;
+    color:white;
+    border-radius:5px;
+}
+
+/* Table Setup */
+#table-setup .red{background:red;}
+#table-setup .blue{background:blue;}
+#table-setup .green{background:green;}
+#table-setup .orange{background:orange;}
+#table-setup .purple{background:purple;}
+#table-setup .cyan{background:cyan;}
+#table-setup .group {color:white; text-align: center;}
+#table-setup .group div{width:100%;}
+#table-setup .group span div{width:33.333%;float:left;}
+
+/* Create this Experience */
+.create-experience-img{
+    margin:0 auto;
+    width:1225px;
+    display: block;
+}
+
+/* Todo Styles */
+[ng\:cloak], [ng-cloak]{display: none !important;}
+.done-true {text-decoration: line-through;color: #ddd;}

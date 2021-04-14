@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Console Outputs</title>
+    <link rel="SHORTCUT ICON" type="image/png" href="./assets/img/favicon.png?rnd=123">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/reveal.css">
+</head>
+<body>
+    <div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h2>Explain the console outputs</h2>
+				<pre>
+					<code data-trim>
+const foo = 'Hello';
+(() => {
+    const bar = ' World';
+    console.log(foo + bar);
+})();
+console.log(foo + bar);
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h2>Explain the console outputs</h2>
+				<pre>
+					<code data-trim contenteditable>
+const x = 5;
+
+(() => {
+    let x;
+    console.log(x);
+    x = 10;
+    console.log(x);
+})();
+					</code>
+				</pre>
+			</section>
+			<section>
+				<h2>Explain the console output</h2>
+				<pre>
+					<code data-trim contenteditable>
+function consoleFunction(val) {
+    const newVal = `${val * 2}`;
+    const useThis = () => { console.log(newVal); };
+    return useThis;
+}
+
+const testThis = consoleFunction(5);
+testThis();
+					</code>
+				</pre>
+			</section>
+
+			<section>
+				<h2>Explain the console output</h2>
+				<pre>
+					<code data-trim contenteditable>
+const fn1 = (a) => a*3;
+function fn2(a){
+    return a/5;
+}
+let fn3 = function (a,b){
+    return a+b
+}
+
+console.log(fn3(fn1(fn1(2)),fn1(fn2(10))));
+					</code>
+				</pre>
+			</section>
+
+		</div>
+
+	</div>
+
+    <script src="./assets/js/base.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.4.1/js/reveal.min.js"></script>
+
+    <script>
+
+    	// Full list of configuration options available at:
+    	// https://github.com/hakimel/reveal.js#configuration
+    	Reveal.initialize({
+    		controls: false,
+    		progress: true,
+    		history: true,
+    		center: true,
+    		transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+    		// Optional reveal.js plugins
+    		dependencies: [
+    			{ src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+    		]
+    	});
+
+    </script>
+
+</body>
+</html>

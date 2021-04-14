@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AngularJS Todo</title>
+    <link rel="SHORTCUT ICON" type="image/png" href="./assets/img/favicon.png?rnd=123">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/base.css">
+
+</head>
+<body>
+    <div>
+        <h1>Javascript</h1>
+        <h2>You have <span id="item-count">0</span> left to do</h2>
+        <form>
+            <input placeholder="I need to..." type="text" id="form-box" />
+            <button id="btn-add">Add</button>
+            <button id="btn-clear">Clear Completed</button>
+        </form>
+        <ul id="items">
+            <li>
+                <input type="checkbox" />
+                <span>First Item</span>
+            </li>
+                <li>
+                    <input type="checkbox" />
+                    <span>Another Item</span>
+                </li>
+        </ul>
+    </div>
+    <script src="./assets/js/base.js"></script>
+    <script>
+
+        var itemsList = document.getElementById('items'),
+            initCount = itemsList.getElementsByTagName('li').length,
+            countDisplay = document.getElementById('item-count');
+
+        countDisplay.innerHTML = initCount;
+
+        function itemCheck(event) {
+            var itemCheck = event.target,
+                itemText = itemCheck.parentNode.lastElementChild;
+            if (itemCheck.checked) {
+                itemText.className = "done-true";
+            }else{
+                itemText.className = "";
+            }
+        }
+        document.getElementById('items').addEventListener("click", function(event){itemCheck(event)}, false);
+    </script>
+</body>
+
+</html>

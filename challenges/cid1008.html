@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>jQuery Todo</title>
+    <link rel="SHORTCUT ICON" type="image/png" href="./assets/img/favicon.png?rnd=123">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/base.css">
+</head>
+<body>
+    <div>
+        <h2>jQuery Todo</h2>
+        <h3>You have <span class="item-count"></span> left to do</h3>
+        <form>
+            <input placeholder="I need to..." type="text" id="form-box" />
+            <button class="btn-add">Add</button>
+            <button class="btn-clear">Clear Completed</button>
+        </form>
+        <ul class="items">
+            <li>
+                <input type="checkbox" />
+                <span>First Item</span>
+            </li>
+            <li>
+                <input type="checkbox" />
+                <span>Another Item</span>
+            </li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="./assets/js/base.js"></script>
+
+    <script>
+        const initCount = $(".items li").length,
+            $countDisplay = $('.item-count');
+
+        $countDisplay.text(initCount);
+
+        $(".items").on('click', 'li', function(){
+            var $itemText = $(this).find('span'),
+                $itemCheck = $(this).find('input');
+
+            if ($itemCheck.is(':checked')) {
+                $itemText.addClass("done-true");
+            }else{
+                $itemText.removeClass("done-true");
+            }
+        });
+
+    </script>
+</body>
+</html>

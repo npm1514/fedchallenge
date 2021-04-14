@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Search the List</title>
+    <link rel="SHORTCUT ICON" type="image/png" href="./assets/img/favicon.png?rnd=123">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/base.css">
+</head>
+<body>
+    <section>
+        <h2>Search the List</h2>
+        <p>Write a statement that searches the list provided.</p>
+        <p>Example: search "x" or "X" ==> "Maximina Bohm"</p>
+        <input type="text" placeholder="Find a student" id="searchInput">
+        <ul id="full-list">
+            <li class="list-item">Elia Larkey</li>
+            <li class="list-item">Maragaret Henning</li>
+            <li class="list-item">Maximina Bohm</li>
+            <li class="list-item">Lakia Pippins</li>
+            <li class="list-item">Nettie Deutsch</li>
+            <li class="list-item">Marcella Knipp</li>
+            <li class="list-item">Ezekiel Donner</li>
+            <li class="list-item">Lauralee Rahaim</li>
+            <li class="list-item">Sadye Alford</li>
+            <li class="list-item">Matha Leith</li>
+            <li class="list-item">Kyle Pellegrin</li>
+            <li class="list-item">Edmund Duffin</li>
+            <li class="list-item">Daysi Cross</li>
+            <li class="list-item">Cheri Breshears</li>
+            <li class="list-item">Annis Caldwell</li>
+            <li class="list-item">Nancy Ottman</li>
+            <li class="list-item">Bebe Auger</li>
+            <li class="list-item">Mervin Tennison</li>
+            <li class="list-item">Salvador Mcabee</li>
+            <li class="list-item">Shaquita Gallop</li>
+            <li class="list-item">Vernon Mcmaster</li>
+        </ul>
+    </section>
+
+    <script src="./assets/js/base.js"></script>
+
+    <script>
+        const listContainer = document.getElementById('full-list');
+        const itemList = listContainer.getElementsByClassName('list-item');
+        const searchInput = document.getElementById('searchInput');
+
+        function search(term) {
+
+        }
+        searchInput.addEventListener('keyup', function(){
+            search(searchInput.value.toLowerCase());
+        });
+    </script>
+</body>
+</html>
