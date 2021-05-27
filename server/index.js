@@ -1,13 +1,10 @@
 const path = require('path');
-
 const health = require('./api/health');
 const hotload = require('./lib/hotload');
 const staticFiles = require('./lib/staticFiles');
 const challenges = require('./lib/challenges');
 const headers = require('./lib/headers');
-const log = require('./utils/log');
 const env = require('./utils/env');
-const logConsole = require('./utils/logConsole');
 const dashboard = require('./api/dashboardAPI');
 
 const app = new Express();
@@ -28,9 +25,8 @@ app.use(health)
 // Start the server
 Server.listen(env().port, (err) => {
     if (err) {
-        log.info(err);
         return console.error(err);
     }
-    logConsole(`Starting server on http://localhost:${env().port} [${process.env.NODE_ENV}]`);
+    console.log("running on port: " + env().port);
     return null;
 });

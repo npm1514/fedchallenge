@@ -2,7 +2,7 @@ const config = require('./../config');
 const colors = require('colors');
 
 module.exports = () => {
-    const env = process.env.NODE_ENV;
+    const env = process.env.NODE_ENV || 'development';
     const envConfig = config.env;
     const msgConfig = config.messaging;
 
