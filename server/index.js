@@ -1,5 +1,4 @@
 const path = require('path');
-const Express = require('express');
 
 const health = require('./api/health');
 const hotload = require('./lib/hotload');
